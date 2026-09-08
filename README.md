@@ -55,7 +55,7 @@ The Pomodoro timer uses enums to define the different states in the program. The
 ---
 
 ### Countdown timer
-The `UpdateTimer()` function handles counting down the timer by making use of `millis()` instead of delay(). This is because delay() would result in the program needing to stop everything whilst waiting for the countdown. This would prevent the keypad being checked for inputs and, would result in a much more sluggish user experience. 
+The `UpdateTimer()` function handles counting down the timer by making use of `millis()` instead of delay(). This is because `delay()` would result in the program needing to stop everything whilst waiting for the countdown. This would prevent the keypad being checked for inputs and, would result in a much more sluggish user experience. 
 
 `millis()` in this case works far better because it allows for the program to keep running whilst still being able to check how much time has passed. Every loop compares the current `millis()` value against what is stored in `Last_Executed_Millis`. If the difference is greater than 1000 milliseconds, the timer is updated and `Last_Executed_Millis` is set to the current time.
 
